@@ -7,12 +7,12 @@ config.vm.provider :aws do |aws, override|
 aws.access_key_id = "AKIAJFO6D4OIN5KJJNKA"
 aws.secret_access_key = "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"
 aws.security_groups = ["launch-wizard-4"]
-aws.keypair_name = "Packer_Vagrant_Terraform"
+aws.keypair_name = "MyKeyPair"
 aws.region = "us-west-2"
 aws.instance_type = "t2.micro"
 aws.ami = "ami-da07a6ba"
 override.ssh.username = "ubuntu"
-override.ssh.private_key_path = "/home/ubuntu/Packer_Vagrant_Terraform.pem"
+override.ssh.private_key_path = "/root/MyKeyPair.pem"
 end
 
 # -*- mode: ruby -*-
